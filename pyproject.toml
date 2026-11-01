@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "elagent"
+version = "0.1.0"
+description = "ELAgent - a local-first long-horizon agent harness for Ling-3.0-tiny"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+    "httpx>=0.27",
+    "rich>=13.7",
+    "prompt_toolkit>=3.0",
+]
+
+[project.scripts]
+ela = "elagent.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["elagent*"]
